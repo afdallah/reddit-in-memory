@@ -1,7 +1,7 @@
 # reddit-in-memory
 
 
-## create
+## Create a new topic
 route:
 `/create`
 
@@ -15,15 +15,20 @@ e.g
 ```
 any other key specified will return error
 
-## show
+## Get all topics
 Display all available topic
 route:
 `/show`
 
-## upvote
+## Upvote
 route:
 `/upvote:index`
 
-## downvote
+## Downvote
 route:
 `/downvote:index`
+
+
+## Possible Todos
+* [ ] add remove topic 
+* [ ] add sort topic feature
