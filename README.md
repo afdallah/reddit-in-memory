@@ -32,3 +32,4 @@ route:
 ## Possible Todos
 * [ ] add remove topic 
 * [ ] add sort topic feature
+* [ ] root route display all topics
