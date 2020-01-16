@@ -38,6 +38,7 @@ PUT - `/downvote:index`
 
 
 ## Possible Todos
-* [ ] add remove topic
+* [x] add remove topic
 * [ ] add sort topic feature
-* [ ] root route display all topics
+* [x] root route display all topics
+* [x] add get single topic route
