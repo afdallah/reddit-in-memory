@@ -11,6 +11,8 @@ const topicControllers = require('../controllers/topic')
  */
 
 // Create a new topic route
+
+router.get('/', topicControllers.topics)
 router.get('/topics', topicControllers.topics)
 router.get('/topics/:index', topicControllers.topic)
 router.delete('/topics/:index', topicControllers.removeById)
