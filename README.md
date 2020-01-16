@@ -3,7 +3,7 @@
 
 ## Create a new topic
 route:
-POST - `/create`
+`POST` - `/create`
 
 Only accept title, and content key
 e.g
@@ -17,24 +17,29 @@ any other key specified will return error
 
 ## Get all topics
 Display all available topics
+
 route:
-GET - `/`
-GET - `/show`
+
+`GET` - `/`
+
+`GET` - `/show`
 
 ## Get topic by index
 route:
-GET - `/topics/:index`
+`GET` - `/topics/:index`
 
 ## Remove topic by index
-DELETE - `/topics/:index`
+route:
+
+`DELETE` - `/topics/:index`
 
 ## Upvote
 route:
-PUT - `/upvote:index`
+`PUT` - `/upvote:index`
 
 ## Downvote
 route:
-PUT - `/downvote:index`
+`PUT` - `/downvote:index`
 
 
 ## Possible Todos
