@@ -7,7 +7,7 @@ const data = [
     content: 'lorem ipsum dolor sit amet',
     upVote: 0,
     downVote: 0,
-    created: +new Date()
+    created: Date.now()
   }
 ]
 
@@ -16,7 +16,7 @@ const data = [
  */
 exports.create = (req, res) => {
   // validate body
-  // make sure req.body object has required keys
+  // make sure request body has required keys
   const keys = ['title', 'content']
   const invalidKeys = []
 
@@ -32,7 +32,7 @@ exports.create = (req, res) => {
     })
   }
 
-  const created = +new Date()
+  const created = Date.now()
   data.push(Object.assign({}, req.body, { upVote: 0, downVote: 0, created }))
   res.json(data)
 }
@@ -45,7 +45,7 @@ exports.upVote = (req, res) => {
   const index = req.params.index
   if (!data[index]) {
     return res.json({
-      error: `There is not item with index of ${index}`
+      error: `There is no item with index of ${index}`
     })
   }
 
@@ -62,7 +62,7 @@ exports.downVote = (req, res) => {
   const index = req.params.index
   if (!data[index]) {
     return res.json({
-      error: `There is not item with index of ${index}`
+      error: `There is no item with index of ${index}`
     })
   }
 
@@ -72,19 +72,11 @@ exports.downVote = (req, res) => {
 }
 
 /**
- * Remove item by id
- */
-
-/**
  * Display all available topic
  */
 exports.topics = (req, res) => {
   res.json(data)
 }
-
-/**
- * Remove item by id
- */
 
 /**
  * Get a single item by index
