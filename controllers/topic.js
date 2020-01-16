@@ -72,8 +72,59 @@ exports.downVote = (req, res) => {
 }
 
 /**
+ * Remove item by id
+ */
+
+/**
  * Display all available topic
  */
-exports.show = (req, res) => {
+exports.topics = (req, res) => {
+  res.json(data)
+}
+
+/**
+ * Remove item by id
+ */
+
+/**
+ * Get a single item by index
+ */
+exports.topic = (req, res) => {
+  const index = req.params.index
+  // if (typeof index !== 'number') {
+  //   return res.json({
+  //     error: 'Index must be type of number'
+  //   })
+  // }
+
+  if (!data[index]) {
+    return res.json({
+      error: '404 There is no item with index of ' + index
+    })
+  }
+
+  return res.json(data[index])
+}
+
+/**
+ * Remove item by index
+ */
+exports.removeById = (req, res) => {
+  // Add simple validation
+  if (data.length === 1) {
+    return res.json({
+      error: 'Last item can not be deleted'
+    })
+  }
+
+  const index = req.params.index
+  const isExist = data.indexOf(index) >= 0
+  if (isExist) {
+    return res.json({
+      error: '404 There is no item with index of ' + index
+    })
+  }
+
+  data.splice(index, 1)
   res.json(data)
 }
