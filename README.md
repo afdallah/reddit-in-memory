@@ -2,7 +2,7 @@
 
 
 ## Create a new topic
-route:
+endpoint:
 `POST` - `/create`
 
 Only accept title, and content key
@@ -18,27 +18,27 @@ any other key specified will return error
 ## Get all topics
 Display all available topics
 
-route:
+endpoint:
 
 `GET` - `/`
 
 `GET` - `/show`
 
 ## Get topic by index
-route:
+endpoint:
 `GET` - `/topics/:index`
 
 ## Remove topic by index
-route:
+endpoint:
 
 `DELETE` - `/topics/:index`
 
 ## Upvote
-route:
+endpoint:
 `PUT` - `/upvote:index`
 
 ## Downvote
-route:
+endpoint:
 `PUT` - `/downvote:index`
 
 
